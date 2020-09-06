@@ -1,7 +1,22 @@
-source "https://rubygems.org"
+source 'http://rubygems.org'
 
-# Specify your gem's dependencies in fresh_build_sinatra.gemspec
-gemspec
+gem 'sinatra'
+gem 'activerecord', :require => 'active_record'
+gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
+gem 'rake'
+gem 'require_all'
+gem 'sqlite3'
+gem 'thin'
+gem 'shotgun'
+gem 'pry'
+gem 'pry-nav'
+gem 'tux'
+gem 'rack-flash3'
+gem 'bcrypt'
 
-gem "rake", "~> 12.0"
-gem "rspec", "~> 3.0"
+group :test do
+  gem 'rspec'
+  gem 'capybara'
+  gem 'rack-test'
+  gem 'database_cleaner', git: 'https://github.com/bmabey/database_cleaner.git'
+end
